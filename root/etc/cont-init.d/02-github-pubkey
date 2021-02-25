@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+useradd -G wheel -m -s /usr/bin/bash $GITHUB_USERNAME
+mkdir -p /home/$GITHUB_USERNAME/.ssh
+curl -L https://github.com/$GITHUB_USERNAME.keys > /home/$GITHUB_USERNAME/.ssh/authorized_keys
+chown $GITHUB_USERNAME:$GITHUB_USERNAME -R /home/$GITHUB_USERNAME
+chmod 700 /home/$GITHUB_USERNAME/.ssh
+chmod 600 /home/$GITHUB_USERNAME/.ssh/authorized_keys
