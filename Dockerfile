@@ -7,7 +7,7 @@ RUN apt update && \
     apt clean && \
     rm -rf /var/lib/apt/lists/* && \
     groupadd wheel && \
-    echo '' >> /etc/sudoers && \
+    echo '%wheel ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers && \
     curl -L https://github.com/just-containers/s6-overlay/releases/download/$S6_OVERLAY_VERSION/s6-overlay-$S6_OVERLAY_ARCH-installer > s6-overlay-installer && \
     chmod +x s6-overlay-installer && \
     ./s6-overlay-installer / && \
