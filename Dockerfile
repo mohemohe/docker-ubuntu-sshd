@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:22.04
 ARG S6_OVERLAY_VERSION=v2.2.0.3
 ARG S6_OVERLAY_ARCH=amd64
 
