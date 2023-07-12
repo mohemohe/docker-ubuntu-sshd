@@ -1,5 +1,7 @@
 # docker-ubuntu-sshd
 
+[![build](https://github.com/mohemohe/docker-ubuntu-sshd/actions/workflows/build.yaml/badge.svg)](https://github.com/mohemohe/docker-ubuntu-sshd/actions/workflows/build.yaml)
+
 ## pull
 
 ```sh
